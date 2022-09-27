@@ -1,5 +1,3 @@
-library login_app;
-
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {

@@ -1,7 +1,7 @@
 name: login_app
 description: A new Flutter package project.
-version: 1.0.0
-homepage:
+version: 0.0.1
+author: Welinton Prediger da Silva
 
 environment:
   sdk: '>=2.18.0 <3.0.0'
