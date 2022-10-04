@@ -1,9 +1,8 @@
-import 'package:mobx/mobx.dart';
-
+import 'package:micro_app_dependencies/main.dart';
 part 'login_store.g.dart';
 
-class LoginStore = _LoginStoreBase with _$LoginStore;
-abstract class _LoginStoreBase with Store {
+class LoginStore = LoginStoreBase with _$LoginStore;
+abstract class LoginStoreBase with Store {
 
   @observable
   int value = 0;
