@@ -14,6 +14,9 @@ dependencies:
   micro_app_dependencies:
     git: https://github.com/WelintonPrediger/micro_app_dependencies.git
 
+  micro_app_common:
+    git: https://github.com/WelintonPrediger/micro_app_common.git
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,4 +1,5 @@
 import 'package:login_app/app/module/login/_export.dart';
+import 'package:micro_app_common/components/_export_components.dart';
 import 'package:micro_app_dependencies/main.dart';
 import 'package:flutter/material.dart';
 
@@ -10,24 +11,45 @@ class LoginPage extends StatefulWidget {
 class LoginPageState extends State<LoginPage> {
   final LoginStore store = Modular.get();
 
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    usernameController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Micro App Login'),
+        actions: [
+          Observer(builder: (context) => Text('${store.value}'))
+        ],
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Buscou o Micro App Login'),
-            const Text('Teste de Observer com Micro App'),
-            Observer(builder: (context) => Text('${store.value}'))
+            ComponentTextFormField(
+              icon: Icons.person,
+              controller: usernameController,
+            ),
+            const SizedBox(height: 20.0),
+            ComponentTextFormField(
+              icon: Icons.person,
+              controller: usernameController,
+            ),
+            const SizedBox(height: 20.0),
+            ElevatedButton(onPressed: () => Modular.to.pushNamed('/home'), child: const Text('Entrar'))
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => Modular.to.pushNamed('/home'),
+        onPressed: () => store.increment(),
         child: const Icon(Icons.arrow_forward_rounded),
       ),
     );
