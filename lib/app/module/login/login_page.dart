@@ -34,14 +34,22 @@ class LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ComponentTextFormField(
-              icon: Icons.person,
-              controller: usernameController,
+            const Text('Login', style: TextStyle(fontSize: 28)),
+            const SizedBox(height: 20.0),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: ComponentTextFormField(
+                icon: Icons.person,
+                controller: usernameController,
+              ),
             ),
             const SizedBox(height: 20.0),
-            ComponentTextFormField(
-              icon: Icons.person,
-              controller: usernameController,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: ComponentTextFormField(
+                icon: Icons.lock,
+                controller: passwordController,
+              ),
             ),
             const SizedBox(height: 20.0),
             ElevatedButton(onPressed: () => Modular.to.pushNamed('/home'), child: const Text('Entrar'))
