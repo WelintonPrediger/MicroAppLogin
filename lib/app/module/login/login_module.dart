@@ -1,4 +1,4 @@
-import 'package:flutter_modular/flutter_modular.dart';
+import 'package:micro_app_dependencies/main.dart';
 
 import '_export.dart';
 

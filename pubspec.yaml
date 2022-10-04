@@ -1,6 +1,7 @@
 name: login_app
 description: A new Flutter package project.
 version: 0.0.1
+publish_to: 'none'
 
 environment:
   sdk: '>=2.18.0 <3.0.0'
@@ -10,16 +11,15 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_modular: ^5.0.3
-  mobx: ^2.0.7+5
-  flutter_mobx: ^2.0.6+1
+  micro_app_dependencies:
+    git: https://github.com/WelintonPrediger/micro_app_dependencies.git
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  build_runner: ^2.2.0
   flutter_lints: ^2.0.0
+  build_runner: ^2.2.0
   mobx_codegen: ^2.0.7
   modular_test: ^2.0.0
 
