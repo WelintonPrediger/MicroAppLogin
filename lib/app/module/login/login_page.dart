@@ -27,7 +27,10 @@ class LoginPageState extends State<LoginPage> {
       appBar: AppBar(
         title: const Text('Micro App Login'),
         actions: [
-          Observer(builder: (context) => Text('${store.value}'))
+          Padding(
+            padding: const EdgeInsets.only(top: 20.0, right: 20.0),
+            child: Observer(builder: (context) => Text('${store.value}'))
+          )
         ],
       ),
       body: Center(
