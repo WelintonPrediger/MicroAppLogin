@@ -44,6 +44,7 @@ class LoginPageState extends State<LoginPage> {
               child: ComponentTextFormField(
                 icon: Icons.person,
                 controller: usernameController,
+                hint: 'Usuário',
               ),
             ),
             const SizedBox(height: 20.0),
@@ -52,6 +53,7 @@ class LoginPageState extends State<LoginPage> {
               child: ComponentTextFormField(
                 icon: Icons.lock,
                 controller: passwordController,
+                hint: 'Senha',
               ),
             ),
             const SizedBox(height: 20.0),
