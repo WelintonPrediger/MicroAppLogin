@@ -34,7 +34,7 @@ class LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Login', style: TextStyle(fontSize: 28)),
+            const Text('Login', style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600)),
             const SizedBox(height: 20.0),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -52,13 +52,16 @@ class LoginPageState extends State<LoginPage> {
               ),
             ),
             const SizedBox(height: 20.0),
-            ElevatedButton(onPressed: () => Modular.to.pushNamed('/home'), child: const Text('Entrar'))
+            ElevatedButton(
+              onPressed: () => Modular.to.pushNamed('/home/'),
+              child: const Text('Entrar')
+            )
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => store.increment(),
-        child: const Icon(Icons.arrow_forward_rounded),
+        child: const Icon(Icons.add),
       ),
     );
   }
