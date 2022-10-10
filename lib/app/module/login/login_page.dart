@@ -60,11 +60,6 @@ class LoginPageState extends State<LoginPage> {
             ElevatedButton(
               onPressed: () => Modular.to.pushNamed('/home/'),
               child: const Text('Entrar')
-            ),
-            const SizedBox(height: 20.0),
-            ElevatedButton(
-                onPressed: () => Modular.to.pushNamed('/settings/'),
-                child: const Text('Teste Settings')
             )
           ],
         ),
