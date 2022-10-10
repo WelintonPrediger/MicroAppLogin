@@ -1,7 +1,7 @@
-import 'package:login_app/app/module/login/_export.dart';
 import 'package:micro_app_common/components/_export_components.dart';
 import 'package:micro_app_dependencies/main.dart';
 import 'package:flutter/material.dart';
+import 'package:micro_app_login/app/module/login/_export.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
